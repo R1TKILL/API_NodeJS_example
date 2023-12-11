@@ -1,0 +1,9 @@
+#Development ambient:
+.env
+.git/
+.vscode/
+node_modules/
+
+#Development rules.
+.eslintrc.json
+.editorconfig
