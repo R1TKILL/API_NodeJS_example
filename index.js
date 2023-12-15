@@ -14,5 +14,5 @@ const app = express();
 		app.use(contacts);
 
 app.listen(process.env.PORT, () => {
-	console.log(`🚀 Server is running in url ${process.env.ADRESS}${process.env.PORT}`)
+	console.log(`🚀 Server is running in url ${process.env.ADRESS}${process.env.PORT} in mode: ${process.env.NODE_ENV}`)
 });
