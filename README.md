@@ -29,7 +29,7 @@ A **API_NodeJS_example** é um modelo de [API](https://pt.wikipedia.org/wiki/Int
 
 # 🧩Arquitetura da Aplicação:
 
-![Aruitetura_do_projeto](./public/images/arquitetura.png)
+![Aruitetura_do_projeto](./public/images/Structure_API.png)
 
 # 🔧Tecnologias utilizadas: 
 
@@ -74,6 +74,17 @@ A **API_NodeJS_example** é um modelo de [API](https://pt.wikipedia.org/wiki/Int
 
       #Sequelize
       $ npm install sequelize
+
+			#Para testes unitários caso queira testar.
+
+			#Jest
+			$ npm install jest
+
+			#Jest intellisense
+			$ npm install @types/jest
+
+			#supertest
+			$ npm install supertest
 
       #Execute o projeto:
       $ nodemon index.js 

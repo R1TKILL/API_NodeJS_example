@@ -9,6 +9,12 @@ exports.connectSQL = () => {
 		.catch((err) => { console.log(`Connection failed err: ${err}`) })
 };
 
+exports.desconnectSQL = async () => {
+	await connection.sequelize.close()
+		.then(() => { console.log('Desconnected successfully in PostgreSQL!') })
+		.catch((err) => { console.log(`Desconnection failed err: ${err}`) });
+};
+
 exports.createContact = async (perfil, nome, numero) => {
 	await ContactsModel.create({ perfil: perfil, nome: nome, numero: numero });
 };

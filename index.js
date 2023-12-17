@@ -2,7 +2,7 @@
 
 require('dotenv').config();
 const express = require('express');
-const contacts = require('./router/routes');
+const routes = require('./router/routes');
 const middleware = require('./configs/Middlewares/middleware');
 
 const app = express();
@@ -11,8 +11,8 @@ const app = express();
 	// Middlewares:
 		app.use(middleware);
 	// Routes:
-		app.use(contacts);
+		app.use(routes.app);
 
 app.listen(process.env.PORT, () => {
-	console.log(`🚀 Server is running in url ${process.env.ADRESS}${process.env.PORT} in mode: ${process.env.NODE_ENV}`)
+	console.log(`🚀 Server is running in url ${process.env.ADRESS}${process.env.PORT}${routes.routePrefix} in mode: ${process.env.NODE_ENV}`)
 });

@@ -6,7 +6,13 @@ const connection = require('../configs/database/connectionDB');
 exports.connectSQL = async () => {
 	await connection.sequelize.authenticate()
 		.then(() => { console.log('Connected successfully in PostgreSQL!') })
-		.catch((err) => { console.log(`Connection failed err: ${err}`) })
+		.catch((err) => { console.log(`Connection failed err: ${err}`) });
+};
+
+exports.desconnectSQL = async () => {
+	await connection.sequelize.close()
+		.then(() => { console.log('Desconnected successfully in PostgreSQL!') })
+		.catch((err) => { console.log(`Desconnection failed err: ${err}`) });
 };
 
 exports.createContact = async (perfil, nome, numero) => {
