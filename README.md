@@ -41,7 +41,10 @@ A **API_NodeJS_example** é um modelo de [API](https://pt.wikipedia.org/wiki/Int
 - [Cors](https://www.treinaweb.com.br/blog/o-que-e-cors-e-como-resolver-os-principais-erros) - **v2.8.5**  
 - [Dotenv](https://blog.lsantos.dev/dotenv-nodejs/#:~:text=ou%20env%2Dconfig.-,dotenv,ambiente%20na%20mem%C3%B3ria%20do%20runtime.) - **v16.3.1**  
 - [Express](https://www.treinaweb.com.br/blog/o-que-e-o-express-js) - **v4.18.2**  
-- [Sequelize](https://www.linkedin.com/pulse/o-que-%C3%A9-sequelize-thomas-lincoln/?originalSubdomain=pt) - **v6.32.1** 
+- [Sequelize](https://www.linkedin.com/pulse/o-que-%C3%A9-sequelize-thomas-lincoln/?originalSubdomain=pt) - **v6.32.1**
+- [sequelize-cli](https://imasters.com.br/banco-de-dados/tutorial-de-migrations-com-node-js-e-sequelize#:~:text=Sequelize%20CLI,ele%2C%20s%C3%B3%20estou%20apresentando%20agora.) - **v6.6.2** 
+- [supertest](https://imasters.com.br/desenvolvimento/tdd-como-criar-unit-tests-em-node-js-com-tape#:~:text=Um%20deles%20%C3%A9%20o%20m%C3%B3dulo,qualquer%20outro%20m%C3%B3dulo%20de%20asser%C3%A7%C3%B5es.) - **v6.3.3** 
+- [jest](https://coodesh.com/blog/dicionario/o-que-e-jest/#:~:text=Jest%20%C3%A9%20um%20poderoso%20framework,%2C%20no%20lado%20front%2Dend.) - **v29.7.0** 
 
 # 🏁Como iniciar o projeto:
 
@@ -90,6 +93,8 @@ A **API_NodeJS_example** é um modelo de [API](https://pt.wikipedia.org/wiki/Int
       $ nodemon index.js 
 
   ```
+	
+Também é necessário configurar suas credenciais para o banco e ambiente através das variaveis de ambiente, pode-se utilizar as chaves em **.env.example**, definindo seus própios valores em um .env, caso tenha dúvidas acesse: [como usa o .env](https://www.freecodecamp.org/portuguese/news/como-usar-variaveis-de-ambiente-do-node-com-um-arquivo-dotenv-para-node-js-e-npm/)
 
 # 👟Próximos passos:
 
