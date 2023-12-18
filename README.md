@@ -21,11 +21,11 @@ A **API_NodeJS_example** é um modelo de [API](https://pt.wikipedia.org/wiki/Int
 
   ### CRUD completo dos usuários
 
-  - [x]Cadastro de cliente.
-  - [x]Obtenção de todos os cliente.
-  - [x]Obtenção de cliente por id.
-  - [x]Atuaalização de cliente por id.
-  - [x]Remoção de cliente por id.
+  - [x] Cadastro de cliente.
+  - [x] Obtenção de todos os cliente.
+  - [x] Obtenção de cliente por id.
+  - [x] Atuaalização de cliente por id.
+  - [x] Remoção de cliente por id.
 
 # 🧩Arquitetura da Aplicação:
 
