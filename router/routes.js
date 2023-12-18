@@ -1,7 +1,7 @@
 'use strict'
 
 const express = require('express');
-const middleware = require('../configs/Middlewares/middleware');
+const middleware = require('../Middlewares/middleware');
 const contacts = require('./contacts.routes');
 const routePrefix = '/contacts';
 

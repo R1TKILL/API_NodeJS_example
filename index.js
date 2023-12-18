@@ -3,7 +3,7 @@
 require('dotenv').config();
 const express = require('express');
 const routes = require('./router/routes');
-const middleware = require('./configs/Middlewares/middleware');
+const middleware = require('./Middlewares/middleware');
 
 const app = express();
 
