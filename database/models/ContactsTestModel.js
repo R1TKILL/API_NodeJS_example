@@ -1,6 +1,6 @@
 'use strict'
 
-const db = require('../configs/database/connectionDB');
+const db = require('../connectionDB');
 
 // TableTest Model
 const ContactTest = db.sequelize.define('PeopleTest', {

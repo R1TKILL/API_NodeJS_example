@@ -44,7 +44,9 @@ A **API_NodeJS_example** é um modelo de [API](https://pt.wikipedia.org/wiki/Int
 - [Sequelize](https://www.linkedin.com/pulse/o-que-%C3%A9-sequelize-thomas-lincoln/?originalSubdomain=pt) - **v6.32.1**
 - [sequelize-cli](https://imasters.com.br/banco-de-dados/tutorial-de-migrations-com-node-js-e-sequelize#:~:text=Sequelize%20CLI,ele%2C%20s%C3%B3%20estou%20apresentando%20agora.) - **v6.6.2** 
 - [supertest](https://imasters.com.br/desenvolvimento/tdd-como-criar-unit-tests-em-node-js-com-tape#:~:text=Um%20deles%20%C3%A9%20o%20m%C3%B3dulo,qualquer%20outro%20m%C3%B3dulo%20de%20asser%C3%A7%C3%B5es.) - **v6.3.3** 
-- [jest](https://coodesh.com/blog/dicionario/o-que-e-jest/#:~:text=Jest%20%C3%A9%20um%20poderoso%20framework,%2C%20no%20lado%20front%2Dend.) - **v29.7.0** 
+- [jest](https://coodesh.com/blog/dicionario/o-que-e-jest/#:~:text=Jest%20%C3%A9%20um%20poderoso%20framework,%2C%20no%20lado%20front%2Dend.) - **v29.7.0**
+- [pino](https://github.com/pinojs/pino) - **v8.17.1**
+- [pino-rotating-file-stream](https://github.com/thelicato/pino-rotating-file-stream) - **v0.0.2** 
 
 # 🏁Como iniciar o projeto:
 
@@ -89,12 +91,50 @@ A **API_NodeJS_example** é um modelo de [API](https://pt.wikipedia.org/wiki/Int
 			#supertest
 			$ npm install supertest
 
+			# Para os logs:
+			$ npm install pino
+
+			# Pegar todos as informações de requisições web em logs:
+			$ npm install pino-http
+
+			# Para rotacionar os logs:
+			$ npm install pino-rotating-file-stream
+
       #Execute o projeto:
       $ nodemon index.js 
 
   ```
-	
-Também é necessário configurar suas credenciais para o banco e ambiente através das variaveis de ambiente, pode-se utilizar as chaves em **.env.example**, definindo seus própios valores em um .env, caso tenha dúvidas acesse: [como usa o .env](https://www.freecodecamp.org/portuguese/news/como-usar-variaveis-de-ambiente-do-node-com-um-arquivo-dotenv-para-node-js-e-npm/)
+
+### Configurando o .env	
+
+Também é necessário configurar suas credenciais para o banco e ambiente através das variaveis de ambiente, pode-se utilizar as chaves em **.env.example**, definindo seus própios valores em um .env, caso tenha dúvidas acesse: [como usar o .env](https://www.freecodecamp.org/portuguese/news/como-usar-variaveis-de-ambiente-do-node-com-um-arquivo-dotenv-para-node-js-e-npm/)
+
+### Fazendo a migração do database:
+
+```bash
+
+	#Comando para criar novas migrations:
+	$ npx sequelize-cli migration:generate --name create-People
+
+	#Comando para executar as migrations e trazer as tabelas atuais da API para o seu projeto:
+	$ npx sequelize-cli db:migrate
+
+	#Desfazer as migrations, derruba a tabela:
+	$ npx sequelize-cli db:migrate:undo
+
+	#Criando as seeders:
+	$ npx sequelize-cli seed:generate --name peoples
+
+	#Populando banco de dados com as seeds:
+	$ npx sequelize-cli db:seed:all
+
+	#rRemovendo todos os dados banco de dados:
+	$ npx sequelize-cli db:seed:undo
+
+	#OBS: Lembrando que para isso deve-se ter o sequelize-cli instalado em node-modules, e configurar as pastas corretamente ou altera-las no arquivo '.sequelizerc', apontando para o arquivo de configuração corretamente.
+
+ ```
+
 
 # 👟Próximos passos:
 

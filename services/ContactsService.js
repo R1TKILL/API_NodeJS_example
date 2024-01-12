@@ -1,7 +1,7 @@
 'use strict'
 
-const ContactsModel = require('../Models/ContactsModel');
-const connection = require('../configs/database/connectionDB');
+const ContactsModel = require('../database/models/ContactsModel');
+const connection = require('../database/connectionDB');
 
 exports.connectSQL = () => {
 	connection.sequelize.authenticate()

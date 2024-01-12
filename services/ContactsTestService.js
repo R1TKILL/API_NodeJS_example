@@ -1,7 +1,7 @@
 'use strict'
 
-const ContactsTestModel = require('../Models/ContactsTestModel');
-const connection = require('../configs/database/connectionDB');
+const ContactsTestModel = require('../database/models/ContactsTestModel');
+const connection = require('../database/connectionDB');
 
 exports.connectSQL = async () => {
 	await connection.sequelize.authenticate()

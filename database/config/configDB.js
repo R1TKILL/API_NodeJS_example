@@ -11,7 +11,7 @@ module.exports = {
 			dialect: process.env.DIALECT_SQL_DEV,
 			define: { timestamps: false }
 	},
-	test: {
+	test: { // O jest não aceita as environments, apenas declarações explicitas.
 		username: 'postgres',
 		password: 'post',
 		database: 'ContactsTest',
